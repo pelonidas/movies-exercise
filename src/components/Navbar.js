@@ -10,7 +10,7 @@ export default function Navbar(props) {
     const dispatch = useDispatch();
 
     async function getMovies() {
-        let res = await axios.get(`http://omdbapi.com/?apikey=8320bfe5&s=${movie.slug}`)
+        let res = await axios.get(`https://omdbapi.com/?apikey=8320bfe5&s=${movie.slug}`)
         let movies = res.data.Search
         dispatch(setMovie({...movie, movies: [...movies]}))
     }

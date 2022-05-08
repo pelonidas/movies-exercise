@@ -57,7 +57,7 @@ export default function MovieDetail() {
     }, [localStorageArray])
 
     async function getMovie() {
-        const url = `http://www.omdbapi.com/?i=${params.movieId}&apiKey=8320bfe5`;
+        const url = `https://www.omdbapi.com/?i=${params.movieId}&apiKey=8320bfe5`;
         setLoading(true)
         const res = await axios.get(url)
         setNewMovie({...res.data})
