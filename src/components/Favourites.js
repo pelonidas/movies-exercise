@@ -11,7 +11,7 @@ export default function Favourites() {
         navigate(`/movie/${id}`)
     }
 
-    const movies = JSON.parse(window.localStorage.getItem('favourites'))
+    const movies = JSON.parse(window.localStorage.getItem('favourites' || '[]'))
 
     function renderFavourites() {
         if (!movies.length) return <div className={'h-[90vh] flex items-center justify-center'}><h1 className={'text-[4rem] text-center'}>No favourites found...</h1></div>
