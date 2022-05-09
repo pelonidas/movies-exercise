@@ -6,7 +6,7 @@ export default function MovieBox(props) {
         redirect(movie.imdbID)
     }
     return (
-        <div className={'text-center border'}>
+        <div className={'text-center'}>
             <img src={movie.Poster} alt="" className={'mx-auto'}/>
             <h1 className={'text-[1.5rem] text-center mt-[1rem] font-bold cursor-pointer'} onClick={handleClick}>{title}</h1>
         </div>
