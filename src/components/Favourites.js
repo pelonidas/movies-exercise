@@ -12,12 +12,9 @@ export default function Favourites() {
     }
 
     const movies = JSON.parse(window.localStorage.getItem('favourites'))
-    console.log(movies.length)
+
     function renderFavourites() {
-        // if (!movies) return <div className={'h-[90vh] flex items-center justify-center'}><h1 className={'text-[4rem] text-center'}>No favourites found...</h1></div>
-        // if () {
-        //     alert('test')
-        // }
+        if (!movies || !movies.length) return <div className={'h-[90vh] flex items-center justify-center'}><h1 className={'text-[4rem] text-center'}>No favourites found...</h1></div>
         return (
             <div className={'w-[70%] mx-auto h-[90vh] flex flex-col'}>
                 <div className={'grid grid-cols-3 gap-12 mt-[6rem]'}>
